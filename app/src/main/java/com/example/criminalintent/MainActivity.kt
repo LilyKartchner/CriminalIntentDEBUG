@@ -5,8 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import java.util.*
 
-private const val TAG = "MainActivity"
-class MainActivity : AppCompatActivity(), CrimeListFragment.Callbacks {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -17,9 +16,5 @@ class MainActivity : AppCompatActivity(), CrimeListFragment.Callbacks {
             val fragment = CrimeListFragment.newInstance()
             supportFragmentManager.beginTransaction().add(R.id.fragment_container, fragment).commit()
         }
-    }
-
-    override fun onCrimeSelected(crimeId: UUID) {
-        Log.d(TAG, "MainActivity.onCrimeSelected: $crimeId")
     }
 }

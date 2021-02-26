@@ -63,6 +63,3 @@ class CrimeFragment : Fragment() {
 
 
 }
-
-//Fragment.onCreate(Bundle?)
-
