@@ -55,8 +55,8 @@ class CrimeListFragment : Fragment() {
             itemView.setOnClickListener(this)
         }
 
-        override fun onClick(v: View) {
-            Toast.makeText(context, "$[crime.title] clicked!", Toast.LENGTH_SHORT).show()
+        override fun onClick(v: View?) {
+            Toast.makeText(context, "${crime.title} clicked!", Toast.LENGTH_SHORT).show()
         }
 
         fun bind(crime: Crime) {

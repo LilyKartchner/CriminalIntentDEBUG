@@ -25,11 +25,9 @@ class CrimeFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_crime, container,false)
-
         titleField = view.findViewById(R.id.crime_title) as EditText
         dateButton = view.findViewById(R.id.crime_date) as Button
         solvedCheckBox = view.findViewById(R.id.crime_solved) as CheckBox
-
         dateButton.apply {
             text = crime.date.toString()
             isEnabled = false
@@ -48,7 +46,7 @@ class CrimeFragment : Fragment() {
                 crime.title = sequence.toString()
             }
 
-            override fun afterTextChanged(s: Editable?) {
+            override fun afterTextChanged(sequence: Editable?) {
                 // Leave blank for now
             }
         }
@@ -60,6 +58,4 @@ class CrimeFragment : Fragment() {
             }
         }
     }
-
-
 }

@@ -33,12 +33,3 @@ class CrimeRepository private constructor(context: Context) {
         }
     }
 }
-
-
-//    fun updateCrime(crime: Crime) { //Don't think these should exist pre-chapter 12/11?
-//        crimeDao.updateCrime(crime)
-//    }
-//
-//    fun addCrime(crime: Crime) {
-//        crimeDao.addCrime(crime)
-//    }
